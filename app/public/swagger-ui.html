@@ -38,8 +38,9 @@
     <script>
     window.onload = function() {
       // Begin Swagger UI call region
+      const url = window.location.href
       const ui = SwaggerUIBundle({
-        url: "/swagger-doc",
+        url: `${url.includes('/jyt') ? '/uf' : ''}/swagger-doc`,
         dom_id: '#swagger-ui',
         deepLinking: true,
         presets: [
